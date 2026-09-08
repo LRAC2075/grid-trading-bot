@@ -1,0 +1,91 @@
+2026-09-05 22:21:41,410 - __main__ - INFO - ============================================================
+2026-09-05 22:21:41,410 - __main__ - INFO - Iniciando Data Pipeline Extendido para Grid Trading Bot
+2026-09-05 22:21:41,411 - __main__ - INFO - ============================================================
+2026-09-05 22:21:41,413 - __main__ - INFO - Configuración: BTC-USDT - ['15m', '1H', '4H']
+2026-09-05 22:21:41,413 - __main__ - INFO - Días de historia: 30
+2026-09-05 22:21:41,414 - __main__ - INFO - Batches estimados para 15m: 28
+2026-09-05 22:21:41,414 - __main__ - INFO - Tiempo estimado: 0.1 minutos
+2026-09-05 22:21:43,660 - __main__ - INFO - Conexión a Supabase establecida
+2026-09-05 22:21:43,661 - __main__ - INFO - Iniciando descarga 15m - 30 días de historia
+2026-09-05 22:24:30,048 - __main__ - INFO - 15m: 991 klines guardados (10 batches)
+2026-09-05 22:27:05,376 - __main__ - ERROR - Error guardando kline: connection was closed in the middle of operation
+2026-09-05 22:27:13,246 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,248 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,249 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,250 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,251 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,253 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,255 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,258 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,266 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,268 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,270 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,272 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,275 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,277 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,280 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,281 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,283 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,285 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,286 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,286 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,287 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,288 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,289 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,294 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,296 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,296 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,297 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,298 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,299 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,300 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,300 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,301 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,302 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,303 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,304 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,304 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,310 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,311 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,312 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,312 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,313 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,314 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,315 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,316 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,316 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,317 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,317 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,318 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,319 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,319 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,320 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,320 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,321 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,324 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,325 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,326 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,327 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,327 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,328 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,329 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,329 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,330 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,330 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,331 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,332 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,332 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,333 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,333 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,334 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,334 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,335 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,335 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,336 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,337 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,340 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,341 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,342 - __main__ - ERROR - Error guardando kline: cannot call Connection.execute(): connection has been released back to the pool
+2026-09-05 22:27:13,343 - __main__ - ERROR - Error en 15m: cannot call Transaction.__aexit__(): the underlying connection is closed
+2026-09-05 22:27:16,126 - __main__ - INFO - Señal de interrupción recibida, cerrando...
+2026-09-05 22:27:16,131 - __main__ - INFO - Conexión a Supabase cerrada

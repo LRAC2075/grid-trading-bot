@@ -1,0 +1,8 @@
+2026-09-05 22:58:37,455 - INFO - Conexion a Supabase establecida
+2026-09-05 22:58:37,457 - INFO - ============================================================
+2026-09-05 22:58:37,462 - INFO - Descargando 30 dias de velas 15m
+2026-09-05 22:58:37,465 - INFO - ============================================================
+2026-09-05 22:58:37,468 - ERROR - Error fetch: 'NoneType' object has no attribute 'get'
+2026-09-05 22:58:37,477 - WARNING - Batch 1: Sin datos
+2026-09-05 22:58:37,478 - INFO - Descarga completada: 0 velas en 0 batches
+2026-09-05 22:58:37,625 - INFO - Conexion cerrada

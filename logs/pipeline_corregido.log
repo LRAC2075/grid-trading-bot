@@ -1,0 +1,24 @@
+2026-09-05 22:53:21,396 - __main__ - INFO - ============================================================
+2026-09-05 22:53:21,396 - __main__ - INFO - Pipeline CORREGIDO - Evita bucle infinito
+2026-09-05 22:53:21,397 - __main__ - INFO - ============================================================
+2026-09-05 22:53:23,449 - __main__ - INFO - Conexion establecida
+2026-09-05 22:53:23,450 - __main__ - INFO - Iniciando descarga 15m - 30 dias
+2026-09-05 22:53:23,452 - __main__ - INFO - Esperando ~2880 velas en 29 batches
+2026-09-05 22:53:23,849 - __main__ - WARNING - 15m: Sin datos en batch 1
+2026-09-05 22:53:24,532 - __main__ - WARNING - 15m: Sin datos en batch 2
+2026-09-05 22:53:25,141 - __main__ - WARNING - 15m: Sin datos en batch 3
+2026-09-05 22:53:25,769 - __main__ - WARNING - 15m: Sin datos en batch 4
+2026-09-05 22:53:26,368 - __main__ - WARNING - 15m: Sin datos en batch 5
+2026-09-05 22:53:26,978 - __main__ - WARNING - 15m: Sin datos en batch 6
+2026-09-05 22:53:27,653 - __main__ - WARNING - 15m: Sin datos en batch 7
+2026-09-05 22:53:28,262 - __main__ - WARNING - 15m: Sin datos en batch 8
+2026-09-05 22:53:28,888 - __main__ - WARNING - 15m: Sin datos en batch 9
+2026-09-05 22:53:29,479 - __main__ - WARNING - 15m: Sin datos en batch 10
+2026-09-05 22:53:30,089 - __main__ - WARNING - 15m: Sin datos en batch 11
+2026-09-05 22:53:30,694 - __main__ - WARNING - 15m: Sin datos en batch 12
+2026-09-05 22:53:31,291 - __main__ - WARNING - 15m: Sin datos en batch 13
+2026-09-05 22:53:31,895 - __main__ - WARNING - 15m: Sin datos en batch 14
+2026-09-05 22:53:32,972 - __main__ - WARNING - 15m: Sin datos en batch 15
+2026-09-05 22:53:33,690 - __main__ - WARNING - 15m: Sin datos en batch 16
+2026-09-05 22:53:34,751 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-1' coro=<main() done, defined at C:\Users\hpc\Desktop\grid_trading_bot\data_pipeline.py:236> wait_for=<_GatheringFuture pending cb=[Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at C:\Users\hpc\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:820]>

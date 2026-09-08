@@ -1,0 +1,17 @@
+2026-09-05 22:30:43,343 - __main__ - INFO - ============================================================
+2026-09-05 22:30:43,343 - __main__ - INFO - Iniciando Data Pipeline Robusto
+2026-09-05 22:30:43,344 - __main__ - INFO - ============================================================
+2026-09-05 22:30:45,607 - __main__ - INFO - Iniciando descarga 15m - 30 días
+2026-09-05 22:30:52,991 - __main__ - INFO - Señal de interrupción recibida
+2026-09-05 22:30:53,710 - __main__ - INFO - Señal de interrupción recibida
+2026-09-05 22:30:53,742 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000020EC93F7770>
+2026-09-05 22:30:53,744 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020EC95DCB40>, 1139959.9323912)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000020EC93F7E00>
+2026-09-05 22:30:53,762 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-11' coro=<Connection._cancel() done, defined at C:\Users\hpc\Desktop\grid_trading_bot\venv\Lib\site-packages\asyncpg\connection.py:1652> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2026-09-05 22:30:53,766 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-12' coro=<PoolConnectionHolder.release() done, defined at C:\Users\hpc\Desktop\grid_trading_bot\venv\Lib\site-packages\asyncpg\pool.py:195> wait_for=<Future finished exception=RuntimeError('Event loop is closed')> cb=[shield.<locals>._inner_done_callback() at C:\Users\hpc\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:958]>
+2026-09-05 22:30:53,907 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-1' coro=<main() done, defined at C:\Users\hpc\Desktop\grid_trading_bot\data_pipeline.py:271> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at C:\Users\hpc\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:975, Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at C:\Users\hpc\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:820]>

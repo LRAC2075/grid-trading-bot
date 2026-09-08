@@ -1,0 +1,23 @@
+En C:\Users\hpc\Desktop\grid_trading_bot\run_pipeline.ps1: 70 Car쟠ter: 41
++     Write-Host "긫- Error en el pipeline" -ForegroundColor Red
++                                         ~~~~~~~~~~~~~~~~~~~~~~
+Falta la cadena en el terminador: ".
+En C:\Users\hpc\Desktop\grid_trading_bot\run_pipeline.ps1: 67 Car쟠ter: 26
++ if ($LASTEXITCODE -eq 0) {
++                          ~
+Falta la llave de cierre "}" en el bloque de instrucciones o la definici줻 de tipo.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString
+ 
+Iniciando Grid Trading Bot - Data Pipeline
+===========================================
+ERROR: No se encontr형 el entorno virtual en .\venv\Scripts\Activate.ps1
+Iniciando Grid Trading Bot - Data Pipeline
+===========================================
+ERROR: No se encontr형 el entorno virtual en .\venv\Scripts\Activate.ps1
+Iniciando Grid Trading Bot - Data Pipeline
+===========================================
+ERROR: No se encontr형 el entorno virtual en .\venv\Scripts\Activate.ps1
+Iniciando Grid Trading Bot - Data Pipeline
+===========================================
+ERROR: No se encontr형 el entorno virtual en .\venv\Scripts\Activate.ps1
