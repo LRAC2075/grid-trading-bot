@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot RL - Monitor de Análisis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-blue-400 mb-2">Radiografía del Agente RL</h1>
+        <p class="text-gray-400 mb-8">Monitoreo en tiempo real de la salida de la Red Neuronal ONNX.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Panel 1: Salida Cruda del Modelo -->
+            <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 shadow-lg">
+                <h2 class="text-xl font-semibold text-purple-400 mb-4">Inputs de la Red (Acción 4D)</h2>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm text-gray-400 mb-1">
+                            <span>[0] Ajuste de Centro</span> <span id="out0">-</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div id="bar0" class="bg-purple-500 h-2 rounded-full" style="width: 50%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm text-gray-400 mb-1">
+                            <span>[1] Amplitud (Volatilidad)</span> <span id="out1">-</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div id="bar1" class="bg-purple-500 h-2 rounded-full" style="width: 50%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm text-gray-400 mb-1">
+                            <span>[2] Stop Loss (Riesgo)</span> <span id="out2">-</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div id="bar2" class="bg-red-500 h-2 rounded-full" style="width: 50%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm text-gray-400 mb-1">
+                            <span>[3] Take Profit (Recompensa)</span> <span id="out3">-</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div id="bar3" class="bg-green-500 h-2 rounded-full" style="width: 50%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2: Traducción al Grid Real -->
+            <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 shadow-lg">
+                <h2 class="text-xl font-semibold text-blue-400 mb-4">Mapeo Físico (Grid)</h2>
+                <ul class="space-y-3 text-lg">
+                    <li class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400">Última Evaluación:</span> <strong id="timestamp" class="text-white">-</strong>
+                    </li>
+                    <li class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400">Precio Ref (BTC):</span> <strong id="price" class="text-yellow-400">-</strong>
+                    </li>
+                    <li class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400">Rango del Grid:</span> <strong id="grid-range" class="text-blue-300">-</strong>
+                    </li>
+                    <li class="flex justify-between border-b border-gray-700 pb-2">
+                        <span class="text-gray-400">Stop Loss Distancia:</span> <strong id="sl-dist" class="text-red-400">-</strong>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-400">Take Profit Distancia:</span> <strong id="tp-dist" class="text-green-400">-</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchDebugData() {
+            try {
+                const response = await fetch('/api/debug');
+                const data = await response.json();
+                
+                if (data.raw_action) {
+                    // Actualizar valores crudos
+                    for(let i=0; i<4; i++) {
+                        let val = data.raw_action[i];
+                        document.getElementById(`out${i}`).innerText = val.toFixed(4);
+                        // Normalizar de [-1, 1] a [0, 100]% para la barra
+                        let pct = ((val + 1) / 2) * 100;
+                        document.getElementById(`bar${i}`).style.width = `${pct}%`;
+                    }
+
+                    // Actualizar métricas reales
+                    document.getElementById('timestamp').innerText = data.timestamp;
+                    document.getElementById('price').innerText = `$${data.ref_price}`;
+                    document.getElementById('grid-range').innerText = `$${data.grid_lower} - $${data.grid_upper}`;
+                    document.getElementById('sl-dist').innerText = `${data.sl_pct}%`;
+                    document.getElementById('tp-dist').innerText = `${data.tp_pct}%`;
+                }
+            } catch (error) {
+                console.error("Esperando primera evaluación de la red...", error);
+            }
+        }
+
+        // Consultar cada 5 segundos
+        setInterval(fetchDebugData, 5000);
+        fetchDebugData(); // Llamada inicial
+    </script>
+</body>
+</html>
