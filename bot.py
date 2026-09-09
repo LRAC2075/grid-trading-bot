@@ -10,6 +10,7 @@ Versión final corregida:
 - Reintentos en fetch de datos
 - Control de concurrencia y throttling
 - Alertas de Telegram sin bloqueo
+- Conversión explícita a float nativo para JSON
 """
 
 import asyncio
@@ -446,7 +447,9 @@ class TradingBot:
         tp_pct = 0.01 + ((action[3] + 1.0) / 2.0) * (0.10 - 0.01)
         if tp_pct < 2 * sl_pct:
             tp_pct = 2 * sl_pct
-        return lower, upper, sl_pct, tp_pct
+
+        # Convertir explícitamente a float nativo para evitar problemas de serialización
+        return float(lower), float(upper), float(sl_pct), float(tp_pct)
 
     async def strategy_loop(self):
         async with aiohttp.ClientSession() as session:
@@ -472,6 +475,7 @@ class TradingBot:
                     action = self.engine.predict(obs)
                     lower, upper, sl_pct, tp_pct = self.decode_action(action, ref_price)
 
+                    # Todos los valores son ahora float nativo
                     self.last_analysis = {
                         "timestamp": pd.Timestamp.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
                         "ref_price": round(ref_price, 2),
