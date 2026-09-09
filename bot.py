@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 Bot de trading asíncrono RL (Fase 5 - Monitoreo Visual y Telegram)
-Versión mejorada:
+Versión final corregida:
 - Base de datos asíncrona (aiosqlite)
-- Corrección de features de retorno
-- Manejo correcto de posiciones activas vs. órdenes límite
+- Cálculo correcto de retornos y log‑returns
+- Manejo seguro de posiciones activas vs. órdenes límite
 - Cálculo de PnL con comisiones
 - Límite de riesgo total
 - Reintentos en fetch de datos
@@ -15,7 +15,6 @@ Versión mejorada:
 import asyncio
 import logging
 import os
-import time
 from typing import Optional, List, Dict, Tuple
 
 import aiohttp
@@ -353,9 +352,15 @@ class FeatureExtractor:
         l = df['low'].values.astype(float)
         v = df['volume'].values.astype(float)
 
-        # Returns correctos
-        returns = np.diff(c, prepend=c[0]) / np.where(c[:-1] != 0, c[:-1], 1e-8)
-        log_returns = np.diff(np.log(np.where(c > 0, c, 1e-8)), prepend=np.log(c[0] if c[0] > 0 else 1e-8))
+        # Returns correctos (longitud n)
+        returns = np.zeros(n)
+        if n > 1:
+            returns[1:] = np.diff(c) / np.where(c[:-1] != 0, c[:-1], 1e-8)
+
+        # Log-returns (longitud n)
+        log_returns = np.zeros(n)
+        if n > 1:
+            log_returns[1:] = np.diff(np.log(np.where(c > 0, c, 1e-8)))
 
         # Rango alto-bajo relativo
         hl_range = (h - l) / np.where(c > 0, c, 1e-8)
@@ -380,12 +385,13 @@ class FeatureExtractor:
                 rs = avg_gain / avg_loss if avg_loss != 0 else 0
                 rsi[i] = 100.0 if avg_loss == 0 else 100.0 - (100.0 / (1.0 + rs))
 
-        # Volatilidad (rolling std de returns)
+        # Volatilidad (rolling std de returns, excluyendo primer cero)
         volatility = np.zeros(n)
-        if n >= 14:
-            volatility = pd.Series(returns).rolling(14).std().fillna(0).values
-        else:
-            volatility = np.full(n, np.std(returns))
+        if n > 1:
+            if n >= 14:
+                volatility[1:] = pd.Series(returns[1:]).rolling(14).std().fillna(0).values
+            else:
+                volatility = np.full(n, np.std(returns[1:]))
 
         features = np.column_stack([
             returns,
@@ -664,4 +670,3 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         logger.info("Bot detenido por el usuario")
-        
